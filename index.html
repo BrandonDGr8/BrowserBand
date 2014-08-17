@@ -1,3 +1,475 @@
 <!DOCTYPE html>
 <html>
+    <head>
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans|Metrophobic|Allerta|Gafata|Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans|Metrophobic|Allerta|Gafata|Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+
+    <style>
+        #logo {
+          border: 1px solid gray;
+            background-image: url('http://www.netanimations.net/animated-sound-waves-s-2.gif');
+            background-color:#fbfcfc;
+            color:#000;
+            text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+            font-family:'Metrophobic', sans-serif;;
+            font-size:30px;
+
+        }
+        html, body {
+            background-color:#000;
+            font-family:'Metrophobic', sans-serif;;
+            color:#fbfcfc;
+        }
+
+        img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+        h1 {
+            text-align: center;
+        }
+        .Account {
+
+        }
+        .login {
+
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        article {
+            font-size: 11px;
+            font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    color: #333;
+    line-height: 1.2em;
+    /* not needed */
+    min-height: 5px;
+}
+
+b,
+a {
+    color: #3b5998;
+    text-decoration: none;
+}
+
+a:hover { text-decoration: underline }
+
+h2 {
+    color: #3B5998;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.dropdown {
+    /* display: block; */
+    display: inline-block;
+    margin-right: 3px;
+    margin-left: 3px;
+    position: relative;
+}
+
+.dropdown .dropdown_button {
+    cursor: pointer;
+    width: auto;
+    display: inline-block;
+    padding: 4px 5px;
+    border: 1px solid #AAA;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-weight: bold;
+    color: #717780;
+    line-height: 16px;
+    text-decoration: none !important;
+    background: white;
+}
+
+.dropdown:target .dropdown_button {
+    border: 1px solid #3B5998;
+    color: white;
+    background: #6D84B4;
+    -moz-border-radius-topleft: 2px;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-radius: 2px 2px 0px 0px;
+    border-radius: 2px 2px 0px 0px;
+    border-bottom-color: #6D84B4;
+}
+
+.dropdown .dropdown_close { display: none }
+
+.dropdown:target .dropdown_close { display: inline-block }
+
+.dropdown:target .dropdown_open { display: none }
+
+/* .dropdown .dropdown_button img {
+    height: 14px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    float: left;
+    margin-right: 5px;
+}
+   ================================================== */
+
+.arrow {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid #6B7FA7;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+.dropdown:target .arrow {
+    border-top: 5px solid #fff;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+.dropdown .dropdown_content {
+    display: none;
+    position: absolute;
+    border: 1px solid #777;
+    padding: 0px;
+    background: white;
+    margin: 0;
+}
+
+.dropdown:target .dropdown_content { display: block }
+
+.dropdown .dropdown_content li {
+    list-style: none;
+    margin-left: 0px;
+    line-height: 16px;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.dropdown .dropdown_content li:hover {
+    border-top-color: #3B5998;
+    border-bottom-color: #3B5998;
+    background: #6D84B4;
+}
+
+.dropdown .dropdown_content li a {
+    display: block;
+    padding: 2px 7px;
+    padding-right: 15px;
+    color: black;
+    text-decoration: none !important;
+    white-space: nowrap;
+}
+
+.dropdown .dropdown_content li:hover a {
+    color: white;
+    text-decoration: none !important;
+}
+
+.dropdown .dropdown_content li img {
+    height: 14px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    float: left;
+    margin-right: 5px;
+    border: none;
+}
+
+article {
+    font-size: 11px;
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    color: #333;
+    line-height: 1.2em;
+    /* not needed */
+    min-height: 5px;
+}
+
+b,
+a {
+    color: #3b5998;
+    text-decoration: none;
+}
+
+a:hover { text-decoration: underline }
+
+h2 {
+    color: #3B5998;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.dropdown2 {
+    /* display: block; */
+    display: inline-block;
+    margin-right: 3px;
+    margin-left: 3px;
+    position: relative;
+}
+
+.dropdown2 .dropdown_button2 {
+    cursor: pointer;
+    width: auto;
+    display: inline-block;
+    padding: 4px 5px;
+    border: 1px solid #AAA;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-weight: bold;
+    color: #717780;
+    line-height: 16px;
+    text-decoration: none !important;
+    background: white;
+}
+
+.dropdown2:target .dropdown_button2 {
+    border: 1px solid #3B5998;
+    color: white;
+    background: #6D84B4;
+    -moz-border-radius-topleft: 2px;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-radius: 2px 2px 0px 0px;
+    border-radius: 2px 2px 0px 0px;
+    border-bottom-color: #6D84B4;
+}
+
+.dropdown2 .dropdown_close2 { display: none }
+
+.dropdown2:target .dropdown_close2 { display: inline-block }
+
+.dropdown2:target .dropdown_open2 { display: none }
+
+/* .dropdown .dropdown_button img {
+    height: 14px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    float: left;
+    margin-right: 5px;
+}
+   ================================================== */
+
+.arrow2 {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid #6B7FA7;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+.dropdown2:target .arrow2 {
+    border-top: 5px solid #fff;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+.dropdown2 .dropdown_content2 {
+    display: none;
+    position: absolute;
+    border: 1px solid #777;
+    padding: 0px;
+    background: white;
+    margin: 0;
+}
+
+.dropdown2:target .dropdown_content2 { display: block }
+
+.dropdown2 .dropdown_content2 li {
+    list-style: none;
+    margin-left: 0px;
+    line-height: 16px;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.dropdown2 .dropdown_content2 li:hover {
+    border-top-color: #3B5998;
+    border-bottom-color: #3B5998;
+    background: #6D84B4;
+}
+
+.dropdown2 .dropdown_content2 li a {
+    display: block;
+    padding: 2px 7px;
+    padding-right: 15px;
+    color: black;
+    text-decoration: none !important;
+    white-space: nowrap;
+}
+
+.dropdown2 .dropdown_content2 li:hover a {
+    color: white;
+    text-decoration: none !important;
+}
+
+.dropdown2 .dropdown_content2 li img {
+    height: 14px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    float: left;
+    margin-right: 5px;
+    border: none;
+}
+
+#dropdown {
+    float:right;
+    margin-top:-50px;
+}
+#dropdown2 {
+    float:right;
+    margin-top:-280px;
+
+}
+
+    </style>
+
+    <script>
+        if (!window.webkitAudioContext) {
+            alert('The Web Audio API is not supported in your browser!');
+        }
+        var context = new window.webkitAudioContext();
+        var contextData = {};
+        var source = null;
+        var audioBuffer = null;
+        var startButton, stopButton;
+
+        window.onload = function() {
+            startButton = document.querySelector('button#start');
+            startButton.disabled = true;
+
+            stopButton = document.querySelector('button#stop');
+            stopButton.disabled = true;
+
+            document.querySelector('input[type="file"]').onchange = function(e) {
+                console.log('change event called');
+                var reader = new FileReader();
+                reader.onload = function(e) { initSound(e.target.result); };
+                reader.readAsArrayBuffer(e.target.files[0]);
+            };
+        }
+
+        function initSound(arrayBuffer) {
+            console.log('initSound called. woot.')
+            context.decodeAudioData(arrayBuffer, function(buffer) {
+                audioBuffer = buffer;
+                startButton.disabled = false;
+                stopButton.disabled = false;
+            }, function(e) {
+                console.log('Error decoding', e);
+            });
+        }
+
+        function readID3(result){
+            return new DataView(result);
+        }
+
+        function playSound() {
+            source = context.createBufferSource(); // Global so we can .noteOff() later.
+            source.buffer = audioBuffer;
+            source.loop = false;
+            source.connect(context.destination);
+
+            var startTime = 0;
+            if (contextData.currentTime) { startTime = contextData.currentTime; }
+            document.getElementById('frame').style.display = 'block';
+            source.start(0, startTime);
+        }
+
+        function pauseSound() {
+            if (source) {
+                contextData.currentTime = context.currentTime;
+                document.getElementById('frame').style.display = 'none';
+                source.stop(0);
+            }
+        }
+    </script>
+
+    <body>
+        <div id='logo'>
+            <!--<h1>BrowserBand</h1>-->
+            <img src="http://i.imgur.com/kAwgP17.png">
+        </div>
+
+
+
+
+
+        <div class="Account">
+            <h3>Sign up for BrowserBand!</h3>
+         <form>
+Email: <input type="Email" name="Email">
+Password: <input type="Password" name="Password">
+<input type="submit" value="Submit">
+</form>
+        </div>
+
+        <article>
+    <!-- ▼ -->
+    <div class="dropdown" id="dropdown">
+
+            <a class="dropdown_button dropdown_close" href="#">Share with <span class="arrow"></span></a>
+        <a class="dropdown_button dropdown_open" href="#dropdown">Share with <span class="arrow"></span></a>
+
+
+
+        <ul class="dropdown_content">
+            <li></i><i class="fa fa-facebook-square"></i> Facebook</a></li>
+            <li><a href="#"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+            <li><a href="#"><i class="fa fa-reddit"></i> Reddit</a></li>
+            <li><a href="#"><i class="fa fa-tumblr"></i> Tumblr</a></li>
+        </ul>
+
+    </div>
+
+
+</article>
+
+<article>
+    <!-- ▼ -->
+    <div class="dropdown2" id="dropdown2">
+
+            <a class="dropdown_button2 dropdown_close2" href="#"><i class="fa fa-user"></i>Account <span class="arrow2"></span></a>
+        <a class="dropdown_button2 dropdown_open2" href="#dropdown2"><i class="fa fa-user"></i> Account <span class="arrow2"></span></a>
+
+        <ul class="dropdown_content2">
+            <li><a href="#"><i class="fa fa-music"></i> My Music</a></li>
+            <li><a href="#"><i class="fa fa-users"></i> Friends</a></li>
+            <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+            <li><a href="#"><i class="fa fa-minus-square"></i> Log Out</a></li>
+        </ul>
+
+    </div>
+
+</article>
+
+
+
+        <div>Customize your music... </div>
+
+        <div style='background-color: dimgray; width: 100%; height: 100px; position: relative;'></div>
+        <iframe src="http://orbifold.net/html5" id="frame" frameborder="0" style="width: 100%; height: 1000px; display: none; margin-top: -85px;"></iframe>
+
+        <div> <h3>The Song by No Name </h2></div>
+
+
+        <!-- Uploading A Thing -->
+        <input type="file" accept="audio/*">
+        <button onclick="playSound()" id='start'><i class="fa fa-play"></i></button>
+        <button onclick="pauseSound()" id='stop'><i class="fa fa-pause"></i></button>
+    </body>
 </html>
